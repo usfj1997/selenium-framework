@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="classes">
-    <test verbose="2" preserve-order="true" name="C:/Users/Udara Jayasuriya/Documents/Self Study/SeleniumFramework">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Udara.S/Documents/Self Study/selenium-framework">
         <classes>
-            <class name="tests.Test_NG_Demo"/>
+            <class name="listeners.TestNGListenerDemo">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                </methods>
+            </class>
+            <class name="listeners.TestNGListenerDemo1">
+                <methods>
+                    <include name="test4"/>
+                    <include name="test5"/>
+                    <include name="test6"/>
+                </methods>
+            </class>
+            <class name="tests.ExtentReportsDemoWithTestNG">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+            <class name="tests.Test_NG_Demo">
+                <methods>
+                    <include name="googleSearchTest"/>
+                </methods>
+            </class>
             <class name="tests.Test_NG_Demo1">
                 <methods>
                     <include name="googleSearchTest"/>

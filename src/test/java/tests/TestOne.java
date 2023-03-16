@@ -5,15 +5,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class TestOne {
     public static void main(String[] args) throws InterruptedException {
         TestOne.searchGoogle();
     }
     public static void searchGoogle () throws InterruptedException {
-        WebDriverManager.edgedriver().setup();
-        WebDriver driver = new EdgeDriver();
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriver driver = new ChromeDriver(options);
 //        Opening google.com
         driver.get("https://www.google.com/");
 //        enter text in the text box
